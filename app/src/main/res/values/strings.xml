@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Grupo1_TP1</string>
+    <string name="etiqueta_main_activity">TP N° 1</string>
 </resources>
