@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Grupo1_TP1</string>
     <string name="etiqueta_main_activity">TP N° 1</string>
+    <string name="etiqueta_ejercicio_1">Suma</string>
+    <string name="button_main_ir_ejercicio_1">EJERCICIO 1</string>
+    <string name="button_main_ir_ejercicio_2">EJERCICIO 2</string>
+    <string name="textview_main_integrantes_gr1">Ayala Gastón, Díaz Juan Pablo, Encinas William Iván, Orellano Esteban Joselo, Silva Carlos Andrés</string>
 </resources>
