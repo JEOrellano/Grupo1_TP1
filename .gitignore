@@ -1,15 +1,51 @@
+# Directories
+.idea/
+.gradle/
+build/
+app/build/
+
+# Files for macOS
+*.DS_Store
+
+# Log files
+*.log
+
+# Android Studio specific
+/captures/
+/.externalNativeBuild/
 *.iml
-.gradle
 /local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
-local.properties
+
+# Keystore files
+*.jks
+
+# Gradle files
+.gradle/
+/gradle/
+/gradle-wrapper.jar
+
+# Ignore APKs
+*.apk
+*.ap_
+
+# Ignore auto-generated files by lint
+/lint/reports/
+/lint/results/
+
+# Ignore generated local.properties file (sdk path, etc.)
+/local.properties
+
+# Ignore ProGuard files
+proguard/*.txt
+proguard/*.pro
+
+# Ignore IntelliJ IDEA files
+*.ipr
+*.iws
+*.idea/
+*.iml
+
+# Ignore Kotlin compiler working directory
+/target/
+/out/
+

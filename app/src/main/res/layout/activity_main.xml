@@ -12,7 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="176dp"
-        android:text="EJERCICIO 1"
+        android:onClick="irEjercicio1"
+        android:text="@string/button_main_ir_ejercicio_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="EJERCICIO 2"
+        android:text="@string/button_main_ir_ejercicio_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/main_btnEjercicio1" />
@@ -33,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:gravity="center"
-        android:text="Ayala Gastón, Díaz Juan Pablo, Encinas William Iván, Orellano Esteban Joselo, Silva Carlos Andrés"
+        android:text="@string/textview_main_integrantes_gr1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
