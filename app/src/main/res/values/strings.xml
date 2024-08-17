@@ -23,12 +23,8 @@
     <string name="btnCalculadoraSuma">+</string>
     <string name="btnCalculadoraResta">-</string>
     <string name="btnCalculadoraMultiplicacion">*</string>
-    <string name="btnCalculadoraBorrar">Borrar</string>
+    <string name="btnCalculadoraBorrar">BORRAR</string>
     <string name="btnCalculadoraIgual">=</string>
     <string name="btnCalculadoraDividir">/</string>
-
-
-
-
 
 </resources>
