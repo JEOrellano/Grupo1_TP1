@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ejercicio2Activity">
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="375dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/textResultado"
+        android:textAlignment="viewEnd"
+        android:textSize="60sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:layout_width="375dp"
+        android:layout_height="334dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtResultado">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn7"
+                style="@style/botonCalculadora"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:elegantTextHeight="true"
+                android:includeFontPadding="true"
+                android:padding="15dp"
+                android:text="@string/btnCalculadora_7"
+                app:iconPadding="8dp"
+                app:iconSize="16dp" />
+
+            <Button
+                android:id="@+id/btn8"
+                style="@style/botonCalculadora"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:elegantTextHeight="true"
+                android:includeFontPadding="true"
+                android:padding="15dp"
+                android:text="@string/btnCalculadora_8"
+                app:iconPadding="8dp"
+                app:iconSize="16dp" />
+
+            <Button
+                android:id="@+id/btn9"
+                style="@style/botonCalculadora"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:elegantTextHeight="true"
+                android:includeFontPadding="true"
+                android:padding="15dp"
+                android:text="@string/btnCalculadora_9"
+                app:iconPadding="8dp"
+                app:iconSize="16dp" />
+
+            <Button
+                android:id="@+id/btnMas"
+                style="@style/botonCalculadora"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:elegantTextHeight="true"
+                android:includeFontPadding="false"
+                android:padding="15dp"
+                android:text="@string/btnCalculadoraSuma"
+                app:iconSize="16dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn4"
+                style="@style/botonCalculadora"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:elegantTextHeight="true"
+                android:includeFontPadding="true"
+                android:padding="15dp"
+                android:text="@string/btnCalculadora_4"
+                app:iconPadding="8dp"
+                app:iconSize="16dp" />
+
+            <Button
+                android:id="@+id/btn5"
+                style="@style/botonCalculadora"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:elegantTextHeight="true"
+                android:includeFontPadding="true"
+                android:padding="15dp"
+                android:text="@string/btnCalculadora_5"
+                app:iconPadding="8dp"
+                app:iconSize="16dp" />
+
+            <Button
+                android:id="@+id/btn6"
+                style="@style/botonCalculadora"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:elegantTextHeight="true"
+                android:includeFontPadding="true"
+                android:padding="15dp"
+                android:text="@string/btnCalculadora_6"
+                app:iconPadding="8dp"
+                app:iconSize="16dp" />
+
+            <Button
+                android:id="@+id/btnMenos"
+                style="@style/botonCalculadora"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:elegantTextHeight="true"
+                android:includeFontPadding="true"
+                android:padding="15dp"
+                android:text="@string/btnCalculadoraResta"
+                app:iconPadding="8dp"
+                app:iconSize="16dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn1"
+                style="@style/botonCalculadora"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:elegantTextHeight="true"
+                android:includeFontPadding="true"
+                android:padding="15dp"
+                android:text="@string/btnCalculadora_1"
+                app:iconPadding="8dp"
+                app:iconSize="16dp" />
+
+            <Button
+                android:id="@+id/btn2"
+                style="@style/botonCalculadora"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:elegantTextHeight="true"
+                android:includeFontPadding="true"
+                android:padding="15dp"
+                android:text="@string/btnCalculadora_2"
+                app:iconPadding="8dp"
+                app:iconSize="16dp" />
+
+            <Button
+                android:id="@+id/btn3"
+                style="@style/botonCalculadora"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:elegantTextHeight="true"
+                android:includeFontPadding="true"
+                android:padding="15dp"
+                android:text="@string/btnCalculadora_3"
+                app:iconPadding="8dp"
+                app:iconSize="16dp" />
+
+            <Button
+                android:id="@+id/btnMultiplicar"
+                style="@style/botonCalculadora"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:elegantTextHeight="true"
+                android:includeFontPadding="true"
+                android:padding="15dp"
+                android:text="@string/btnCalculadoraMultiplicacion"
+                app:iconPadding="8dp"
+                app:iconSize="16dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnBorrar"
+                style="@style/botonCalculadora"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:elegantTextHeight="true"
+                android:includeFontPadding="true"
+                android:padding="15dp"
+                android:text="@string/btnCalculadoraBorrar"
+                android:textSize="14sp"
+                app:iconPadding="8dp"
+                app:iconSize="16dp" />
+
+            <Button
+                android:id="@+id/btn0"
+                style="@style/botonCalculadora"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:elegantTextHeight="true"
+                android:includeFontPadding="true"
+                android:padding="15dp"
+                android:text="@string/btnCalculadora_0"
+                app:iconPadding="8dp"
+                app:iconSize="16dp" />
+
+            <Button
+                android:id="@+id/btnIgual"
+                style="@style/botonCalculadora"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:elegantTextHeight="true"
+                android:includeFontPadding="true"
+                android:padding="15dp"
+                android:text="@string/btnCalculadoraIgual"
+                app:iconPadding="8dp"
+                app:iconSize="16dp" />
+
+            <Button
+                android:id="@+id/btnDividir"
+                style="@style/botonCalculadora"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:elegantTextHeight="true"
+                android:includeFontPadding="true"
+                android:padding="15dp"
+                android:text="@string/btnCalculadoraDividir"
+                app:iconPadding="8dp"
+                app:iconSize="16dp" />
+        </TableRow>
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
