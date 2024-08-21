@@ -9,7 +9,6 @@
     //botones Calculadora
 
     <string name="textResultado">0</string>
-
     <string name="btnCalculadora_0">0</string>
     <string name="btnCalculadora_1">1</string>
     <string name="btnCalculadora_2">2</string>
@@ -28,6 +27,6 @@
     <string name="btnCalculadoraDividir">/</string>
     <string name="tvNro1">Primer número:</string>
     <string name="tvNro2">Segundo número:</string>
-
+    <string name="btnCalcularEj1">CALCULAR</string>
 
 </resources>
