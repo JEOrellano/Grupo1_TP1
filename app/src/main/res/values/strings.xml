@@ -26,5 +26,8 @@
     <string name="btnCalculadoraBorrar">BORRAR</string>
     <string name="btnCalculadoraIgual">=</string>
     <string name="btnCalculadoraDividir">/</string>
+    <string name="tvNro1">Primer número:</string>
+    <string name="tvNro2">Segundo número:</string>
+
 
 </resources>
