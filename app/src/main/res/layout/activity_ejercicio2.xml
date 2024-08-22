@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="onClickRestar"
     tools:context=".Ejercicio2Activity">
 
     <TextView
@@ -81,6 +82,7 @@
                 android:layout_margin="3dp"
                 android:elegantTextHeight="true"
                 android:includeFontPadding="false"
+                android:onClick="onClickSumar"
                 android:padding="15dp"
                 android:text="@string/btnCalculadoraSuma"
                 app:iconSize="16dp" />
@@ -141,6 +143,7 @@
                 android:layout_margin="3dp"
                 android:elegantTextHeight="true"
                 android:includeFontPadding="true"
+                android:onClick="onClickRestar"
                 android:padding="15dp"
                 android:text="@string/btnCalculadoraResta"
                 app:iconPadding="8dp"

@@ -203,30 +203,118 @@ public class Ejercicio2Activity extends AppCompatActivity {
 
     }
 
-
+    public void onClickSumar (View view){
+        TextView pantalla = (TextView)findViewById(R.id.txtResultado);
+        // Si la pantalla tiene un resultado anterior lo borro
+        if(banderaPostResultado) {
+            pantalla.setText("0");
+            banderaPostResultado = false;
+        }
+        if(borrarCeroInicial(pantalla)) {  pantalla.setText("+"); }
+        else {   pantalla.setText(pantalla.getText()+"+"); }
+    }
+    public void onClickRestar (View view){
+        TextView pantalla = (TextView)findViewById(R.id.txtResultado);
+        // Si la pantalla tiene un resultado anterior lo borro
+        if(banderaPostResultado) {
+            pantalla.setText("0");
+            banderaPostResultado = false;
+        }
+        if(borrarCeroInicial(pantalla)) {  pantalla.setText("-"); }
+        else {   pantalla.setText(pantalla.getText()+"-"); }
+    }
 
 
     public void onClickDividir (View view){
 
-
-
-        //asigno el tipo de operacion
-        operacion = "/";
-
-       //capturo el primer numero
         TextView pantalla = (TextView)findViewById(R.id.txtResultado);
-        num1 = Integer.parseInt((String) pantalla.getText());
-
-        //pongo pantalla en estado inicial
-        pantalla.setText("0");
+        // Si la pantalla tiene un resultado anterior lo borro
+        if(banderaPostResultado) {
+            pantalla.setText("0");
+            banderaPostResultado = false;
+        }
+        if(borrarCeroInicial(pantalla)) {  pantalla.setText("/"); }
+        else {   pantalla.setText(pantalla.getText()+"/"); }
 
     }
 
     public void onClickIgual (View view){
         //capturo el segundo numero
         TextView pantalla = (TextView)findViewById(R.id.txtResultado);
+        String contenidoPantalla = pantalla.getText().toString();
 
+        // Verificar si la pantalla contiene un "+" o "-"
+        if (contenidoPantalla.contains("+")) {
+            // Separar el contenido en dos partes usando el "+"
+            String[] partes = contenidoPantalla.split("\\+");
 
+            // Asegurarse de que hay dos partes
+            if (partes.length == 2) {
+                try {
+                    // Convertir las partes en números
+                    double numero1 = Double.parseDouble(partes[0].trim());
+                    double numero2 = Double.parseDouble(partes[1].trim());
+
+                    // Realizar la suma
+                    double resultado = numero1 + numero2;
+
+                    // Mostrar el resultado en la pantalla
+                    pantalla.setText(String.valueOf(resultado));
+                } catch (NumberFormatException e) {
+                    // Manejo del error si las partes no son números válidos
+                    pantalla.setText("Error");
+                }
+            } else {
+                pantalla.setText("Error");
+            }
+        }
+        if (contenidoPantalla.contains("-")) {
+            // Separar el contenido en dos partes usando el "-"
+            String[] partes = contenidoPantalla.split("\\-");
+
+            // Asegurarse de que hay dos partes
+            if (partes.length == 2) {
+                try {
+                    // Convertir las partes en números
+                    double numero1 = Double.parseDouble(partes[0].trim());
+                    double numero2 = Double.parseDouble(partes[1].trim());
+
+                    // Realizar la resta
+                    double resultado = numero1 - numero2;
+
+                    // Mostrar el resultado en la pantalla
+                    pantalla.setText(String.valueOf(resultado));
+                } catch (NumberFormatException e) {
+                    pantalla.setText("Error");
+                }
+            } else {
+                pantalla.setText("Error");
+            }
+        }
+        if (contenidoPantalla.contains("/")) {
+            // Separar el contenido en dos partes usando el "-"
+            String[] partes = contenidoPantalla.split("\\/");
+
+            // Asegurarse de que hay dos partes
+            if (partes.length == 2) {
+                try {
+                    // Convertir las partes en números
+                    double numero1 = Double.parseDouble(partes[0].trim());
+                    double numero2 = Double.parseDouble(partes[1].trim());
+
+                    // Realizar la dividir
+                    double resultado = numero1 / numero2;
+
+                    // Mostrar el resultado en la pantalla
+                    pantalla.setText(String.valueOf(resultado));
+                } catch (NumberFormatException e) {
+                    pantalla.setText("Error");
+                }
+            } else {
+                pantalla.setText("Error");
+            }
+        }
+/*
         num2 = Integer.parseInt((String) pantalla.getText());
 
         if(operacion.equals("/")) {
@@ -248,10 +336,10 @@ public class Ejercicio2Activity extends AppCompatActivity {
 
             }
 
-        }
+        }*/
 
         //imprimo el resultado
-        pantalla.setText (String.valueOf(num1));
+        //pantalla.setText (String.valueOf(num1));
 
 
     }
