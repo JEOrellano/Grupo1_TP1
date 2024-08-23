@@ -279,6 +279,7 @@ public class Ejercicio2Activity extends AppCompatActivity {
                         // Wy - Mostrar con decimales si no es entero
                         pantalla.setText(String.valueOf(resultado));
                     }
+                    
 
                 } catch (NumberFormatException e) {
                     // Manejo del error si las partes no son números válidos
