@@ -205,6 +205,7 @@
                 android:layout_margin="3dp"
                 android:elegantTextHeight="true"
                 android:includeFontPadding="true"
+                android:onClick="onClickMultiplicar"
                 android:padding="15dp"
                 android:text="@string/btnCalculadoraMultiplicacion"
                 app:iconPadding="8dp"
