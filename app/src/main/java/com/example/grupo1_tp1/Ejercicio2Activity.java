@@ -271,8 +271,15 @@ public class Ejercicio2Activity extends AppCompatActivity {
                     // Realizar la suma
                     double resultado = numero1 + numero2;
 
-                    // Mostrar el resultado en la pantalla
-                    pantalla.setText(String.valueOf(resultado));
+                    // Wy - Verificar si el resultado es un número entero
+                    if (resultado == (int) resultado) {
+                        // Wy - Mostrar sin decimales si es entero
+                        pantalla.setText(String.valueOf((int) resultado));
+                    } else {
+                        // Wy - Mostrar con decimales si no es entero
+                        pantalla.setText(String.valueOf(resultado));
+                    }
+
                 } catch (NumberFormatException e) {
                     // Manejo del error si las partes no son números válidos
                     pantalla.setText("Error");
@@ -295,8 +302,15 @@ public class Ejercicio2Activity extends AppCompatActivity {
                     // Realizar la resta
                     double resultado = numero1 - numero2;
 
-                    // Mostrar el resultado en la pantalla
-                    pantalla.setText(String.valueOf(resultado));
+                    // Wy - Verificar si el resultado es un número entero
+                    if (resultado == (int) resultado) {
+                        // Wy - Mostrar sin decimales si es entero
+                        pantalla.setText(String.valueOf((int) resultado));
+                    } else {
+                        // Wy - Mostrar con decimales si no es entero
+                        pantalla.setText(String.valueOf(resultado));
+                    }
+
                 } catch (NumberFormatException e) {
                     pantalla.setText("Error");
                 }
@@ -319,8 +333,15 @@ public class Ejercicio2Activity extends AppCompatActivity {
                     // Realizar la multipliccion
                     double resultado = numero1 * numero2;
 
-                    // Mostrar el resultado en la pantalla
-                    pantalla.setText(String.valueOf(resultado));
+                    // Wy - Verificar si el resultado es un número entero
+                    if (resultado == (int) resultado) {
+                        // Wy - Mostrar sin decimales si es entero
+                        pantalla.setText(String.valueOf((int) resultado));
+                    } else {
+                        // Wy - Mostrar con decimales si no es entero
+                        pantalla.setText(String.valueOf(resultado));
+                    }
+
                 } catch (NumberFormatException e) {
                     pantalla.setText("Error");
                 }
@@ -345,8 +366,15 @@ public class Ejercicio2Activity extends AppCompatActivity {
                     // Realizar la dividir
                     double resultado = numero1 / numero2;
 
-                    // Mostrar el resultado en la pantalla
-                    pantalla.setText(String.valueOf(resultado));
+                    // Wy - Verificar si el resultado es un número entero
+                    if (resultado == (int) resultado) {
+                        // Wy - Mostrar sin decimales si es entero
+                        pantalla.setText(String.valueOf((int) resultado));
+                    } else {
+                        // Wy - Mostrar con decimales si no es entero
+                        pantalla.setText(String.valueOf(resultado));
+                    }
+
                 } catch (NumberFormatException e) {
                     pantalla.setText("Error");
                 }
