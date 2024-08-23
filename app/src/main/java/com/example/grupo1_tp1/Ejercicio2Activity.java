@@ -238,6 +238,19 @@ public class Ejercicio2Activity extends AppCompatActivity {
 
     }
 
+    public void onClickMultiplicar (View view){
+       // Wy- Genero logica para multiplicacion
+        TextView pantalla = (TextView)findViewById(R.id.txtResultado);
+        // Si la pantalla tiene un resultado anterior lo borro
+        if(banderaPostResultado) {
+            pantalla.setText("0");
+            banderaPostResultado = false;
+        }
+        if(borrarCeroInicial(pantalla)) {  pantalla.setText("*"); }
+        else {   pantalla.setText(pantalla.getText()+"*"); }
+
+    }
+
     public void onClickIgual (View view){
         //capturo el segundo numero
         TextView pantalla = (TextView)findViewById(R.id.txtResultado);
@@ -291,6 +304,33 @@ public class Ejercicio2Activity extends AppCompatActivity {
                 pantalla.setText("Error");
             }
         }
+
+        if (contenidoPantalla.contains("*")) {
+            // Separar el contenido en dos partes usando el "*"
+            String[] partes = contenidoPantalla.split("\\*");
+
+            // Asegurarse de que hay dos partes
+            if (partes.length == 2) {
+                try {
+                    // Convertir las partes en números
+                    double numero1 = Double.parseDouble(partes[0].trim());
+                    double numero2 = Double.parseDouble(partes[1].trim());
+
+                    // Realizar la multipliccion
+                    double resultado = numero1 * numero2;
+
+                    // Mostrar el resultado en la pantalla
+                    pantalla.setText(String.valueOf(resultado));
+                } catch (NumberFormatException e) {
+                    pantalla.setText("Error");
+                }
+            } else {
+                pantalla.setText("Error");
+            }
+        }
+
+
+
         if (contenidoPantalla.contains("/")) {
             // Separar el contenido en dos partes usando el "-"
             String[] partes = contenidoPantalla.split("\\/");
