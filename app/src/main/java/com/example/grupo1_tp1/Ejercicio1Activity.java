@@ -16,6 +16,10 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class Ejercicio1Activity extends AppCompatActivity {
+    private EditText txtVal1;
+    private EditText txtVal2;
+    private TextView tvResult;
+    private Button btnCalc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,34 +27,16 @@ public class Ejercicio1Activity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_ejercicio1);
 
-        Button btnCalc = findViewById(R.id.btnCalcularEj1);
-        final TextView txtVal1 = findViewById(R.id.txtNum1);
-        final TextView txtVal2 = findViewById(R.id.txtNum2);
-        final TextView tvResult = findViewById(R.id.tvResultado);
+        btnCalc = findViewById(R.id.btnCalcularEj1);
+        txtVal1 = findViewById(R.id.txtNum1);
+        txtVal2 = findViewById(R.id.txtNum2);
+        tvResult = findViewById(R.id.tvResultado);
 
         btnCalc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                // Obtener valores de los TextView
-                String strVal1 = txtVal1.getText().toString();
-                String strVal2 = txtVal2.getText().toString();
-
-
-                try {
-                    // Convertir los valores a enteros
-                    int val1 = Integer.parseInt(strVal1);
-                    int val2 = Integer.parseInt(strVal2);
-
-                    // Sumar los valores
-                    int resultado = val1 + val2;
-
-                    // Mostrar el resultado en el TextView
-                    tvResult.setText(Integer.toString(resultado));
-
-                    Log.d(TAG, "onClick: Resultado: " + resultado);
-                } catch (NumberFormatException e) {
-                    Log.e(TAG, "onClick: Error al convertir a entero", e);
+                if (validarIngreso()) {
+                    sumar();
                 }
             }
         });
@@ -60,5 +46,38 @@ public class Ejercicio1Activity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    private boolean validarIngreso(){
+        String val1 = txtVal1.getText().toString();
+        String val2 = txtVal2.getText().toString();
+
+        if(val1.isEmpty()){
+            txtVal1.setError("Ingrese un valor");
+            return false;
+        }
+        if(val2.isEmpty()){
+            txtVal2.setError("Ingrese un valor");
+            return false;
+        }
+        return true;
+    }
+
+    private void sumar(){
+        // Obtener valores de los TextView
+        String strVal1 = txtVal1.getText().toString();
+        String strVal2 = txtVal2.getText().toString();
+
+        // Convertir los valores a enteros
+        int val1 = Integer.parseInt(strVal1);
+        int val2 = Integer.parseInt(strVal2);
+
+        // Sumar los valores
+        int resultado = val1 + val2;
+
+        // Mostrar el resultado en el TextView
+        tvResult.setText(Integer.toString(resultado));
+
+        Log.d(TAG, "onClick: Resultado: " + resultado);
     }
 }
