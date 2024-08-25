@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="176dp"
         android:onClick="irEjercicio1"
-        android:text="@string/button_main_ir_ejercicio_1"
+        android:text="@string/button_main_icr_ejercicio_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,6 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
+        android:onClick="irEjercicio2"
         android:text="@string/button_main_ir_ejercicio_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,4 +40,5 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/main_btnEjercicio2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

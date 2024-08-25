@@ -29,4 +29,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Ejercicio1Activity.class);
         startActivity(intent);
     }
+
+    // Funcion para ir a Ejercicio2Activity
+
+    public void irEjercicio2(View view) {
+        Intent intent = new Intent(this, Ejercicio2Activity.class);
+        startActivity(intent);
+    }
+
 }
