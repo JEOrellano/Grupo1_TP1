@@ -257,9 +257,9 @@ public class Ejercicio2Activity extends AppCompatActivity {
         String contenidoPantalla = pantalla.getText().toString();
 
         // Verificar si la pantalla contiene un "+" o "-"
-        if (contenidoPantalla.contains("+")) {
+        if (contenidoPantalla.lastIndexOf("+") > 0) {
             // Separar el contenido en dos partes usando el "+"
-            String[] partes = contenidoPantalla.split("\\+");
+            String[] partes = contenidoPantalla.split("(?<=\\d)\\+");
 
             // Asegurarse de que hay dos partes
             if (partes.length == 2) {
@@ -267,9 +267,10 @@ public class Ejercicio2Activity extends AppCompatActivity {
                     // Convertir las partes en números
                     double numero1 = Double.parseDouble(partes[0].trim());
                     double numero2 = Double.parseDouble(partes[1].trim());
-
                     // Realizar la suma
                     double resultado = numero1 + numero2;
+
+
 
                     // Wy - Verificar si el resultado es un número entero
                     if (resultado == (int) resultado) {
@@ -289,9 +290,9 @@ public class Ejercicio2Activity extends AppCompatActivity {
                 pantalla.setText("Error");
             }
         }
-        if (contenidoPantalla.contains("-")) {
+        else if (contenidoPantalla.lastIndexOf("-") > 0) {
             // Separar el contenido en dos partes usando el "-"
-            String[] partes = contenidoPantalla.split("\\-");
+            String[] partes = contenidoPantalla.split("(?<=\\d)-");
 
             // Asegurarse de que hay dos partes
             if (partes.length == 2) {
